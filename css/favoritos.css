@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karantina", system-ui;
+    font-style: normal;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #BF0A30;
+    padding: 20px;
+    font-family: "Karantina", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.logo {
+    width: 250px;
+    height: 95px;
+}
+
+.navegation{
+    margin-right: 0;
+    padding-top: 30px;
+    color: white;
+}
+
+.nav-items {
+    color: white;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.nav-items li {
+    list-style: none;
+    font-size: 35px;
+}
+ 
+.nav-items li a { 
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-items li:nth-child(2) a {
+    position: relative;
+}
+
+.nav-items li:nth-child(2) a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%;
+    height: 3px; 
+    background-color: white;
+}
+
+
+
+.imagen {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 170px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(planetatrece.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secf {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 140px;
+}
+
+.profile .logo {
+    height: 190px;
+    width: 320px;
+    padding-left: 130px;
+}
+
+
+
+.perfil {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+
+.general {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+
+
+
+
+
+.infous {
+    width: 250px;
+    height: 280px;
+    background-color: #252525;
+    border-radius: 20px;
+    margin-left: 96px;
+    object-fit: contain;
+}
+
+.nombreuser {
+    margin-left: 32px;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.desc {
+    margin-top: 20px;
+    color: white;
+    margin-left: 25px;
+    font-size: 40px;
+    line-height: 40px;
+    
+}
+
+
+.buttoned {
+    margin-left: 97px;
+    margin-top: 20px;
+}
+
+
+.buttoned button {
+    color: white;
+    padding: 10px;
+    background-color: #E2944E;
+    width: 250px;
+    font-size: 30px;
+    border-radius: 12px;
+    cursor: pointer;    
+}
+
+.buttoned:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    
+    
+    
+}
+
+
+.fav {
+    color: #E2944E;
+    padding-right: 80px;
+    padding-top: 70px;
+}
+
+.fav .botfav {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
+    background-color: #252525;
+    border-radius: 30px;
+}
+
+.favoritos-titulo {
+    color: #E2944E;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E2944E;
+    padding-top: 20PX;
+    width: 800PX;
+}
+
+
+
+.Ordername {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.charname {
+    padding-top: 11px;
+}
+
+
+.chardetail:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    
+}
+
+
+.favoritos-container {
+    display: flex;
+    justify-content: center;
+    background-color: #252525;
+    gap: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 800px;
+    margin-top: 20px;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c2b2b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 460px;
+    color: white;    
+}
+
+
+
+.character-image {
+    width: 310px;
+    height: 360px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 40pxpx;
+    
+}
+
+.character-card h2 {
+    font-size: 30px;
+    
+}
+
+.detail-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #a8a7a7;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1A1A1A;
+    text-align: center;
+    font-size: 25px;
+}
