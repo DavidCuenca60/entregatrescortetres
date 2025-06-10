@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karantina", system-ui;
+    font-style: normal;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #BF0A30;
+    padding: 20px;
+}
+
+.imagen {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 250px;
+    height: 95px;
+}
+
+.navegation {
+    padding-top: 30px;
+    color: white;
+}
+
+.nav-items {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.nav-items li {
+    list-style: none;
+    font-size: 35px;
+}
+
+.nav-items li a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+.nav-items li:nth-child(3) a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 170px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(planetatrece.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.perfil-container {
+    text-align: center;
+    color: white;
+}
+
+
+
+.perfil-icono {
+    margin-bottom: 20px;
+}
+
+.perfil-icono h2 {
+    font-size: 50px;
+    
+}
+
+
+
+
+
+.perfil-info {
+    background-color: #222;
+    padding: 20px;
+    margin-left: 8px;
+    padding-left: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.perfil-info input {
+    color: #dddddd;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.perfil-info h3 {
+    font-size: 20px;
+    color: #808080;
+    margin-right: 380px;
+}
+
+#saludo {
+    font-size: 30px;
+}
+
+.perfil-info h1 {
+    font-size: 30px;
+    color: #3a3a3a;
+    padding-right: 400px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background-color: rgb(105, 105, 105);
+}
+
+
+
+.bienvenido button{
+    font-size: 40px;
+    width: 400px;
+    margin-top: 20px;
+    padding: 7px;
+    border-radius: 15px;
+    background-color: #d78546;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.editone .edit {
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 26px;
+    background-color: #cfcece;
+}
+
+.editone .edit:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #aeacac;
+}
+
+
+.saveone .save {
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 26px;
+    background-color: #cfcece;
+}
+
+.saveone .save:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #aeacac;
+}
+
+.chardetail:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #aeacac;
+
+}
+
+
+
+
+.cerrar-sesion {
+    background-color: #d88c4a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 26px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.cerrar-sesion:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-color: #b26e3a;
+}
+
+.slider-wraper {
+    border-radius: 55px;
+    padding: 30px;
+}
+
+.search-container-dos {
+    display: flex;
+    justify-self: center;
+    font-family: "Karantina", system-ui;
+    font-style: normal;
+    background-color:white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-container-dos i {
+    font-size: 20px;
+    color: gray;
+    margin-right: 10px;
+}
+
+.search-container-dos input {
+    font-family: "Karantina", system-ui;
+    font-style: normal;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+    color: black;
+}
+
+.search-container-dos input::placeholder {
+    font-family: "Karantina", system-ui;
+    font-style: normal;
+    color: gray;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.user-image-GOKU {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    padding-right: 40px;
+}
+
+.navegation-GOKU{
+    margin-right: 0;
+}
+
+.nav-items-GOKU {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    background: none;
+}
+
+
+
+
+
+.card-list .card-item-GOKU {
+    width: 300px;
+    padding-top: 40px;
+    padding-left: 1px;
+    border-radius: 30px;
+    background-color: #3f0310;
+}
+
+
+
+.user-image-VEGETA {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 580px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+.navegation-VEGETA{
+    margin-right: 0;
+}
+
+.nav-items-VEGETA {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 30px;
+    background: none;
+}
+
+.nav-items-VEGETA li {
+    font-size: 35px;
+    display: flex;
+    list-style: none;
+    background: none;
+}
+ 
+.nav-items-VEGETA li a {
+    font-size: 35px; 
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #c3c3c3;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px;
+    border-radius: 8px;
+}
+
+.nav-items-VEGETA li a:hover {
+    background-color: #a9a9a9;
+}
+    
+.nav-items-VEGETA li a:active{
+    background-color: #808080;
+}
+
+.card-list .card-item-VEGETA {
+    width: 400px;
+    padding-top: 40px;
+    padding-left: 65px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2)
+}
+
+
+
+
+.user-image-PICOLO {
+    display: flex;
+    justify-content: center;
+    
+
+    width: 200px;
+    height: 500px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.navegation-PICOLO{
+    margin-right: 0;
+}
+
+.nav-items-PICOLO {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    background: none;
+}
+
+.nav-items-PICOLO li {
+    font-size: 35px;
+    display: flex;
+    list-style: none;
+    background: none;
+}
+ 
+.nav-items-PICOLO li a {
+    font-size: 35px; 
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #c3c3c3;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px;
+    border-radius: 8px;
+}
+
+.nav-items-PICOLO li a:hover {
+    background-color: #a9a9a9;
+}
+    
+.nav-items-PICOLO li a:active{
+    background-color: #808080;
+}
+
+.card-list .card-item-PICOLO {
+    color: #fff;
+    width: 300px;
+    padding-top: 40px;
+    
+    border-radius: 30px;
+    background-color: rgb(2, 2, 89);
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1A1A1A;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+

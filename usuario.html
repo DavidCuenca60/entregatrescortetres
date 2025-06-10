@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/usuario.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Perfil favoritos</title>
+</head>
+
+<body>
+    <header>
+        
+        <div class="encabezado">
+  
+          <div class="imagen">
+            <a href="inicio.html">
+            <img
+              class="logo"
+              src="imagenes/logo.png"
+              alt=""     
+            />
+            </a>
+          </div>
+  
+          <div class="navegation">
+            <ul class="nav-items">
+              <li>
+                <a href="inicio.html">HOME</a>
+              </li>
+              <li>
+                <a href="favoritos.html">MIS FAVORITOS</a>
+              </li>
+              <li>
+                <a href="">PERFIL</a>
+              </li>
+          </div>
+  
+        </div>
+  
+    </header>
+
+
+    
+    
+    <div class="container">
+      <div class="slider-wraper">
+          
+
+          <div class="card-list">
+              
+              <div class="card-item-GOKU">
+                  <img src="https://dragonball-api.com/transformaciones/goku_ssj2.webp" alt="User Image" class="user-image-GOKU">
+                  <div class="navegation-GOKU">
+                      
+                  </div>
+              </div>
+              <br>
+              <div class="perfil-container">
+                <div class="perfil-icono">
+                  <label for="upload-img">
+                    <img src="imagenes/circleperfil.png" alt="User Image" class="space-im">
+                  </label>
+                  <input type="file" id="upload-img" style="display: none;">
+                  
+      
+                </div>
+        
+                
+                <div class="bienvenido">
+                    <h1 id="saludo"></h1>
+                    <button id="logout">Salir</button>
+                </div>
+
+
+              </div>
+              <br>
+              <div class="card-item-PICOLO">
+                  <img src="https://dragonball-api.com/characters/vegeta_normal.webp" alt="User Image" class="user-image-PICOLO">
+                  <div class="navegation-PICOLO">
+                      
+                  </div>
+              </div>
+
+          </div>
+
+          
+
+
+
+
+          <br>
+          <br>
+      </div>    
+    </div>
+    
+    
+
+    <script src="javascript/usuario.js"></script>
+  
+    <footer>
+      <p>&copy; 2023 AnimeCity - Dragon Ball. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
