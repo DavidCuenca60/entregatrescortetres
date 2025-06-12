@@ -1,14 +1,42 @@
 const personajeContainer = document.querySelector('#personaje-container');
 
-function obtenerPersonajeFavorito() {
-    const favoritos = localStorage.getItem("personajesFavoritos");
-    return favoritos ? JSON.parse(favoritos) : [];
+function obtenerUsuarioLogueado() {
+    return JSON.parse(localStorage.getItem('logueado'));
 }
 
-function guardarPersonajeFavorito(favoritos) {
-  localStorage.setItem("personajesFavoritos", JSON.stringify(favoritos));
+function obtenerUsuariosRegistrados() {
+    return JSON.parse(localStorage.getItem('usuarios')) || [];
 }
 
+function guardarUsuarioLogueado(usuario) {
+    localStorage.setItem('logueado', JSON.stringify(usuario));
+}
+
+function guardarUsuarios(usuarios) {
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+}
+
+
+function guardarFavoritosParaUsuario(favoritos) {
+    let logueado = obtenerUsuarioLogueado();
+    let usuarios = obtenerUsuariosRegistrados();
+
+    
+    logueado.favoritos = favoritos;
+    guardarUsuarioLogueado(logueado);
+
+    
+    const index = usuarios.findIndex(user => user.email === logueado.email);
+    if (index !== -1) {
+        usuarios[index].favoritos = favoritos;
+        guardarUsuarios(usuarios);
+    }
+}
+
+function obtenerFavoritosDelUsuario() {
+    const logueado = obtenerUsuarioLogueado();
+    return logueado?.favoritos || [];
+}
 
 async function fetchAndDisplayCharacters() {
     const personajeId = new URLSearchParams(window.location.search).get('id');
@@ -133,28 +161,28 @@ function displayCharacter(personaje) {
 
     const checkbox = document.getElementById("favCheckbox");
 
-    // Verificamos si el personaje ya está en favoritos
-    const favoritos = obtenerPersonajeFavorito();
+    
+    const favoritos = obtenerFavoritosDelUsuario();
     const yaEsFavorito = favoritos.some(fav => fav.id === personaje.id);
 
     checkbox.checked = yaEsFavorito;
 
     checkbox.addEventListener("change", () => {
-        let nuevosFavoritos = obtenerPersonajeFavorito();
+        let nuevosFavoritos = obtenerFavoritosDelUsuario();
 
         if (checkbox.checked) {
-            // Agregar personaje
+            
             nuevosFavoritos.push({
                 id: personaje.id,
                 name: personaje.name,
                 image: personaje.image
             });
         } else {
-            // Quitar personaje
+            
             nuevosFavoritos = nuevosFavoritos.filter(fav => fav.id !== personaje.id);
         }
 
-        guardarPersonajeFavorito(nuevosFavoritos);
+        guardarFavoritosParaUsuario(nuevosFavoritos);
     });
 }
 

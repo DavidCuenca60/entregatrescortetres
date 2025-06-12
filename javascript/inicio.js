@@ -27,7 +27,11 @@ function renderCharacter(character) {
             return card;
         }
 
-// Lógica
+
+let personajesCargados = [];
+let todosLosPersonajes = [];
+
+
 function fetchAndDisplayCharacters() {
     const container = document.getElementById('characters-container');
 
@@ -43,18 +47,37 @@ function fetchAndDisplayCharacters() {
                     data.image, data.affiliation, data.description
                 );
 
+                
+
                 const cardCharacter = renderCharacter(character);
                 container.appendChild(cardCharacter);
             })
     });
 }
 
+function buscarPersonaje() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    
+    if (!searchTerm.trim()) {
+        renderCharacter();
+        return;
+    }
+    
+    const resultados = todosLosPersonajes.filter(personaje => 
+        personaje.image.toLowerCase().includes(searchTerm) || 
+        personaje.name.toLowerCase().includes(searchTerm) ||
+        personaje.id.toLowerCase().includes(searchTerm)
+    );
+    
+    personajesCargados = resultados;
+    renderCharacter();
+}
+
+
 document.addEventListener('DOMContentLoaded', fetchAndDisplayCharacters);
 
 
-const logout = document.getElementById('logout')
 const logueado = JSON.parse(localStorage.getItem('logueado'))
-
 
 if (!logueado) {
     window.location.href = "login.html"
@@ -63,10 +86,3 @@ else {
     const saludo = document.getElementById('saludo')
     saludo.innerHTML = `Bienvenid@, ${logueado.nombreCompleto}`
 }
-
-function salir() {
-    alert('Hasta la vista')
-    localStorage.removeItem('logueado')
-    window.location.href = 'login.html'
-}
-

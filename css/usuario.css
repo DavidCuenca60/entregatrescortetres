@@ -175,45 +175,13 @@ body {
 }
 
 
-.saveone .save {
-    padding: 6px;
-    border-radius: 8px;
-    font-size: 26px;
-    background-color: #cfcece;
-}
-
-.saveone .save:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    background-color: #aeacac;
-}
-
-.chardetail:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    background-color: #aeacac;
-
-}
 
 
 
 
-.cerrar-sesion {
-    background-color: #d88c4a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 26px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 8px;
-}
 
-.cerrar-sesion:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    background-color: #b26e3a;
-}
+
+
 
 .slider-wraper {
     border-radius: 55px;

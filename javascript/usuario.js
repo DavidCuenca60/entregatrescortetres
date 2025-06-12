@@ -22,16 +22,11 @@ else {
             <h3 id="Ednomuser">Nombre de Usuario &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </h3>
             <h1 id="Ednomuser">${logueado.nombreCompleto} &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp&nbsp</h1>
             
-           
-
+        
             <br>
             <br>
-            
         </div>
-
-    
     `
-    
 }
 
 
